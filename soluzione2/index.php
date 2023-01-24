@@ -53,9 +53,9 @@ class Movie {
 
         return "<h2>" . "Titolo: " . $this->title . "</h2>"
             . "<span>Genere: " . $this -> getAllType() . "</span>"
-            . "<p>" . $this->description . "</p>"
-            . "<span>" . $this->time . "</span>" . "<br>"
-            . "<span>" . $this->vote . "</span>";
+            . "<p>Trama: " . $this->description . "</p>"
+            . "<span>Durata: " . $this->time . "</span>" . "<br><br>"
+            . "<span>Voto: " . $this->vote . "</span>" . "<hr>";
     }
 }
 
@@ -85,17 +85,10 @@ $movies = [
         "4.0"),
     ];
 
-
-// creo il film da stampare successivamente in pagina
-// $signoreAnelli1 = new Movie("Il Signore degli Anelli - La Compagnia dell'anello", $signoreAnelli1Type, "Un Anello per domarli, un Anello per trovarli,
-// un Anello per ghermirli e nel buio incatenarli.", "178 min", "4.7");
-
-// $dune = new Movie("Dune", $duneType, "La pellicola è la prima parte dell'adattamento cinematografico del romanzo omonimo scritto da Frank Herbert, primo capitolo del ciclo di Dune,[3] già trasposto nel film del 1984 di David Lynch e con le miniserie televisive Dune - Il destino dell'universo (2000) e I figli di Dune (2003). ", "155 min", "4.0");
-
 // stampo i film in pagina
 echo "<h1>Elenco Film</h1>";
 
 foreach ($movies as $movie) {
-
+    echo $movie -> getHMTL();
 }
 
